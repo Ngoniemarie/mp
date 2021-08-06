@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+			<link rel="stylesheet" href="css/style.css">
+        {% endblock %}
+
+        
+    </head>
+   <body>
+       <header>
+          <<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('app_subscriber') }}">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+       
+            
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+    
+	<h1>Choosing an Apple</h1>
+<section>
+    <h2>Introduction</h2>
+    <p>This document provides a guide to help with the important task of choosing the correct Apple.</p>
+</section>
+
+<div><small> The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></div>
+
+<div><small> The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></div>
+<div><small> The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></div>
+
+<div>
+
+<h2 class="my-5">Cartes</h2>
+</div>
+
+<div
+class="row">
+{# card bigin #}
+
+
+						<div class="col-md-4">
+					{% for i in 0..10 %}
+   
+
+						 
+							<div class="card mb-3">
+								<h4 class="card-header"></h4>
+
+								<img class="text-start" src="images\khimar-3-voiles-camel.jpg" alt="">
+
+								<rect width="100%" height="100%" fill="#868e96"></rect>
+								<text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">Description image</p>
+								<a href="" class="card-link btn btn-primary">Détails...</a>
+							</div>
+
+{% endfor %}
+						</div>
+						
+					</div>
+</header>
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+
+        	<footer class="mt-5 bg-light py-4 text-center">
+                <p>Copyright &copy simplon.co !!</p>
+            </footer>
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+            <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        {% endblock %}
+    </body>
+</html>
